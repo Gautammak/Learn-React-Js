@@ -1,30 +1,17 @@
-import React,{useState} from "react";
-import ItemList from "./components/jsx-rendering/ItemList";
+import UserList from "./components/functional-components/userList";
 
-export default function App() {
-
-   const [items,setItems] = useState([
-      {id:1,name: "Laptop", price: 800, inStock: true},
-      {id:2,name: "Smartphone", price: 600, inStock: false},
-      {id:3,name: "Headphones", price: 150, inStock: true},
-      {id:4,name: "Smartwatch", price: 200, inStock: false},
-   ])
-
+const App = () => {
+  const users = [
+    { id: 1, name: "Gautam", age: 22 },
+    { id: 2, name: "Rahul", age: 25 },
+  ];
 
   return (
-    <div style={{ padding: "20px" }}>
-      <h1>JSX List Rendering Demo</h1>
-
-       <button onClick={() => setItems([])}>Clear List</button> 
-
-      <button onClick={() => setItems([
-      {id:1,name: "Laptop", price: 800, inStock: true},
-      {id:2,name: "Smartphone", price: 600, inStock: false},
-      {id:3,name: "Headphones", price: 150, inStock: true},
-      {id:4,name: "Smartwatch", price: 200, inStock: false}])}>
-      Reset List</button>
-
-      <ItemList items={items} />
+    <div>
+      <h1>Users</h1>
+      <UserList users={users} />
     </div>
   );
-}
+};
+
+export default App;
