@@ -1,17 +1,26 @@
-import UserList from "./components/functional-components/userList";
+import Button from "./components/react-props-data-flow/Buttton";
+import Card from "./components/react-props-data-flow/Card";
 
-const App = () => {
-  const users = [
-    { id: 1, name: "Gautam", age: 22 },
-    { id: 2, name: "Rahul", age: 25 },
-  ];
+function App() {
+  const handleClick = () => {
+    alert("Button Clicked!");
+  };
 
   return (
-    <div>
-      <h1>Users</h1>
-      <UserList users={users} />
+    <div style={{ display: "flex" }}>
+      
+      <Card title="User 1">
+        <p>Name: Gautam</p>
+        <Button text="Follow" color="green" onClick={handleClick} />
+      </Card>
+
+      <Card title="User 2">
+        <p>Name: Rahul</p>
+        <Button text="Message" color="purple" onClick={handleClick} />
+      </Card>
+
     </div>
   );
-};
+}
 
 export default App;
