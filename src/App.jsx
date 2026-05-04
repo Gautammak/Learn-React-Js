@@ -1,24 +1,20 @@
-import Button from "./components/react-props-data-flow/Buttton";
-import Card from "./components/react-props-data-flow/Card";
+// App.js
+import Counter from "./components/state-usestate/counter";
+import Toggle from "./components/state-usestate/toggle";
+import FormInput from "./components/state-usestate/formInput";
 
 function App() {
-  const handleClick = () => {
-    alert("Button Clicked!");
-  };
-
   return (
-    <div style={{ display: "flex" }}>
-      
-      <Card title="User 1">
-        <p>Name: Gautam</p>
-        <Button text="Follow" color="green" onClick={handleClick} />
-      </Card>
+    <div style={{ padding: "20px" }}>
+      <h2>React Basic Demo</h2>
 
-      <Card title="User 2">
-        <p>Name: Rahul</p>
-        <Button text="Message" color="purple" onClick={handleClick} />
-      </Card>
+      <Counter />
+      <hr />
 
+      <Toggle />
+      <hr />
+
+      <FormInput />
     </div>
   );
 }
