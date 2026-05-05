@@ -1,20 +1,10 @@
 // App.js
-import Counter from "./components/state-usestate/counter";
-import Toggle from "./components/state-usestate/toggle";
-import FormInput from "./components/state-usestate/formInput";
+import Parent from "./components/lifting-state-up/Parent";
 
 function App() {
   return (
     <div style={{ padding: "20px" }}>
-      <h2>React Basic Demo</h2>
-
-      <Counter />
-      <hr />
-
-      <Toggle />
-      <hr />
-
-      <FormInput />
+      <Parent />
     </div>
   );
 }
