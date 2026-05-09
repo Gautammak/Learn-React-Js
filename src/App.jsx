@@ -1,10 +1,9 @@
-// App.js
-import Parent from "./components/lifting-state-up/Parent";
+import LoginForm from "./components/event-handle-form/LoginForm";
 
 function App() {
   return (
-    <div style={{ padding: "20px" }}>
-      <Parent />
+    <div>
+      <LoginForm />
     </div>
   );
 }
